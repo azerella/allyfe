@@ -1,5 +1,8 @@
 # accessible-colour-converter
-> Tool that renders accessible colour-conversions from RGBA values
+[![CircleCI](https://circleci.com/gh/adamzerella/accessible-colour-converter/tree/master.svg?style=svg)](https://circleci.com/gh/adamzerella/accessible-colour-converter/tree/master)
+
+> Tool that renders accessible colour-conversions from RGBA values.
+
 Source code for the colour converter tool that takes RGBA matrices and outputs accessibility options (e.g RGBA Red [255,0,0,1] to deuteranopia red [159, 179, 0, 1])
 
 ## Getting Started
