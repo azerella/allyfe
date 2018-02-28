@@ -49,13 +49,12 @@ function Multiplty(filter, colour) {
         let row = filter.length / 4 * i;
         
         //Sum resulting array index values to index value
-        result[i] = (
-            (colour[0] * result[row + 0])       //Red
-            (colour[1] * result[row + 1]) +     //Green
-            (colour[2] * result[row + 2]) +     //Blue
-            (colour[3] * result[row + 3]) +     //Alpha
-            result[row + 4]                     //E (Used for smoothing)
-        );
+        result[i] = 
+            (colour[0] * result[row + 0])      //Red
+            + (colour[1] * result[row + 1])    //Green
+            + (colour[2] * result[row + 2])    //Blue
+            + (colour[3] * result[row + 3])    //Alpha
+            result[row + 4]                    //E (Used for smoothing)
     }
 
     //Return converted RGBA array to HEX value
