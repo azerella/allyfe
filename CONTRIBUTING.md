@@ -4,16 +4,7 @@ email, or any other method with the owners of this repository before making a ch
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
-## Pull Request Process
-1. TODO 
-
 ## Code of Conduct
-
-### Our Pledge
-TODO
-
-### Our Standards
-TODO
 
 ### Our Responsibilities
 Project maintainers are responsible for clarifying the standards of acceptable

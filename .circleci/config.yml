@@ -5,8 +5,11 @@
 version: 2
 jobs:
   build:
+    release:
+    tag: /.*?/
+    branch: master
+    owner: Adam A. Zerella
     docker:
-      # specify the version you desire here
       - image: circleci/node:7.10
       
       # Specify service dependencies here if necessary

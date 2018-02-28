@@ -1,55 +1,72 @@
 "use strict";
 
-/** @link https://www.npmjs.com/package/color */
+/** 
+ * @link https://www.npmjs.com/package/color 
+*/
 const Color = require('color');
 
 /**
- * @description Convert a RGBA[4] with an accessability filter.
- * @param filter Accessibility filter matrix (e.g deuteranopia[20])
- * @param colour Colour description of any format (RGBA, String, HEX, HSL etc)
+ * @description Convert a RGBA[r, g, b, a] with a given accessability filter in HEX.
+ * 
+ * @param   {array} filter - Accessibility filter matrix (e.g deuteranopia[0,1,0,0,0,1 ... 19])
+ * @param   {array} colour - Colour description of any format (RGBA, String, HEX, HSL etc)
+ * 
+ * @return  {array} Multiply - The VALIDATED filter array and colour array together.
  */
 function Convert(filter, colour) {
-    if (filter.length <= 0 || filter.length !== 20) { 
-        throw "ERROR: Invalid Filter!"; 
+    //Check if filter lengths are valid
+    if (filter.length <= 0 || filter.length !== 20) {
+        throw new Error("ERROR: Invalid Filter!");
     }
 
-    var col = Color(colour).rgb().array()
-
-    if (col.length < 4 ){ 
-        col.push(1)                 //Default alpha channel to 1
-    } else{
-        Color(col).alpha(col[3])   
-    }
+    //Convert colour value to RGB array
+    var rgbArray = Color(colour).rgb().array()
     
-    return Multiplty(filter, col)
+    //Check array length for alpha value.
+    if (rgbArray.length < 4) {
+        rgbArray.push(1)  //Default the alpha channel to 1
+    } 
+    
+    return Multiplty(filter, rgbArray)
 }
 
 /**
- * @description Multiply a filter matrix[20] with a RGBA[4] colour.
- * @param filter Accessibility filter matrix (e.g deuteranopia[20])
- * @param colour RGBA[4] colour (e.g red = [255,0,0,0.5])
+ * @description - Multiply a filter matrix[20] with a RGBA[4] colour.
  * @link https://developer.android.com/reference/android/graphics/ColorMatrix.html
- * @returns Product of the (filter * colour) in RGBA (e.g [159, 179, 0, 0.5])
+
+ * @param {array} filter - Accessibility filter matrix (e.g deuteranopia[20])
+ * @param {array} colour - RGBA[4] colour (e.g red = [255,0,0,0.5])
+ * 
+ * @return {array} result - Product of the (filter * colour) in HEX (e.g [159, 179, 0, 0.5])
  */
 function Multiplty(filter, colour) {
+    //Assign variable to filter array
     var result = filter.slice()
-    var row = 0
 
+    //Iterate through the filter values 
     for (let i = 0; i < 4; i++) {
-		row = filter.length / 4 * i;
-        result[i] = (colour[0] * result[row + 0]) 
-        + (colour[1] * result[row + 1]) 
-        + (colour[2] * result[row + 2]) 
-        + (colour[3] * result[row + 3]) 
-        + result[row + 4];
+        //Assign row length to filter length * RGBA array length * index
+        let row = filter.length / 4 * i;
+        
+        //Sum resulting array index values to index value
+        result[i] = (
+            (colour[0] * result[row + 0])       //Red
+            (colour[1] * result[row + 1]) +     //Green
+            (colour[2] * result[row + 2]) +     //Blue
+            (colour[3] * result[row + 3]) +     //Alpha
+            result[row + 4]                     //E (Used for smoothing)
+        );
     }
 
-    return new Array(
-        Math.round(result[0], 0, 255),  //R
-        Math.round(result[1], 0, 255),  //G
-        Math.round(result[2], 0, 255),  //B
-        result[3]                       //A
-    );
+    //Return converted RGBA array to HEX value
+    return Color(
+        new Array(
+            Math.round(result[0], 0, 255),      //Red
+            Math.round(result[1], 0, 255),      //Green
+            Math.round(result[2], 0, 255),      //Blue
+            result[3]                           //Alpha
+        )
+    ).hex()
 }
 
 module.exports = Convert

@@ -1,6 +1,6 @@
 {
   "name": "accessible-colour-converter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Colour converter tool that takes RGBA matrices and outputs accessibility options.",
   "main": "./index.js",
   "scripts": {

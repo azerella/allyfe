@@ -1,5 +1,8 @@
 "use strict";
 
+/** 
+* @description Preset colour filter matricies to use for colour conversions.
+*/
 const Filters = {
     normal: [
         1,0,0,0,0,
