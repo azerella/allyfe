@@ -13,7 +13,7 @@ const Color = require( 'color' );
  * 
  * @return  { array } Multiply - The VALIDATED filter array and colour array together.
  */
-function Convert( filter, colour ) {
+const Convert = ( filter, colour ) => {
     // Check if filter lengths are valid
     if ( filter.length <= 0 || filter.length !== 20 ) {
         throw new Error( "ERROR: Invalid Filter!" );
@@ -27,7 +27,7 @@ function Convert( filter, colour ) {
         rgbArray.push( 1 )  //Default the alpha channel to 1
     } 
     
-    return Multiplty( filter, rgbArray )
+    return ApplyColorFilter( filter, rgbArray )
 }
 
 /**
@@ -39,7 +39,7 @@ function Convert( filter, colour ) {
  * 
  * @return { array } result - Product of the ( filter * colour) in HEX ( e.g [159, 179, 0, 0.5] ) 
  */
-function Multiplty( filter, colour ) {
+const ApplyColorFilter = ( filter, colour ) => {
     // Assign variable to filter array
     var result = filter.slice()
 

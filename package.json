@@ -17,7 +17,10 @@
     "colour",
     "converter"
   ],
-  "author": "Adam Zerella <adam.zerella@gmail.com>",
+  "author": {
+		"name": "Adam A. Zerella",
+		"email": "adam.zerella@gmail.com"
+	},
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/adamzerella/accessible-colour-converter/issues"
