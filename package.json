@@ -1,21 +1,22 @@
 {
-  "name": "accessible-colour-converter",
+  "name": "colour-filter-converter",
   "version": "0.0.3",
-  "description": "Colour converter tool that takes RGBA matrices and outputs accessibility options.",
+  "description": "Colour converter tool that uses a standard colour value and an accessability eye filter matrix",
   "main": "./index.js",
   "scripts": {
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adamzerella/accessible-colour-converter.git"
+    "url": "git+https://github.com/adamzerella/colour-filter-converter.git"
   },
   "keywords": [
     "accessible",
     "accessiblity",
     "color",
     "colour",
-    "converter"
+    "converter",
+    "filter"
   ],
   "author": {
 		"name": "Adam A. Zerella",
@@ -23,13 +24,31 @@
 	},
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adamzerella/accessible-colour-converter/issues"
+    "url": "https://github.com/adamzerella/colour-filter-converter/issues"
   },
-  "homepage": "https://github.com/adamzerella/accessible-colour-converter#readme",
+  "homepage": "https://github.com/adamzerella/colour-filter-converter#readme",
   "dependencies": {
     "color": "^3.0.0"
   },
   "devDependencies": {
     "jest": "^22.4.2"
-  }
+  },
+  "jest": {
+		"testEnvironment": "node",
+		"testRegex": "\\.spec.js$",
+		"collectCoverageFrom": [
+			"src/*.js"
+		],
+		"roots": [
+			"./__tests__/"
+		],
+		"coverageThreshold": {
+			"global": {
+				"branches": 0,
+				"functions": 0,
+				"lines": 0,
+				"statements": 0
+			}
+		}
+	}
 }

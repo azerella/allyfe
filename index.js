@@ -50,20 +50,20 @@ const ApplyColorFilter = ( filter, colour ) => {
         
         // Sum resulting array index values to index value
         result[i] = 
-            ( colour[0] * result[row + 0] )     // Red
-            + ( colour[1] * result[row + 1] )   // Green
-            + ( colour[2] * result[row + 2] )   // Blue
-            + ( colour[3] * result[row + 3] )   // Alpha
-            result[row + 4]                     // E (Used for smoothing)
-    }
+            ( colour[ 0 ] * result[ row + 0 ] )     // Red
+            + ( colour[ 1 ] * result[ row + 1 ] )   // Green
+            + ( colour[ 2 ] * result[ row + 2 ] )   // Blue
+            + ( colour[ 3 ] * result[ row + 3 ] )   // Alpha
+            result[ row + 4 ]                       // E (Used for smoothing)
+    }    
 
     // Return converted RGBA array to HEX value
     return Color(
         new Array(
-            Math.round( result[0], 0, 255 ),        // Red
-            Math.round( result[1], 0, 255 ),        // Green
-            Math.round( result[2], 0, 255 ),        // Blue
-            result[3]                               // Alpha
+             result[ 0 ],        // Red
+             result[ 1 ],        // Green
+             result[ 2 ],        // Blue
+             result[ 3 ]         // Alpha
         )
     ).hex()
 }
