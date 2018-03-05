@@ -1,6 +1,6 @@
 {
   "name": "accessible-colour-converter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Colour converter tool that takes RGBA matrices and outputs accessibility options.",
   "main": "./index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "colour",
     "converter"
   ],
-  "author": "Adam A. Zerella",
+  "author": "Adam Zerella <adam.zerella@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/adamzerella/accessible-colour-converter/issues"
