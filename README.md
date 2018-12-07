@@ -1,28 +1,24 @@
-# colour-filter-converter
-[![Build Status](https://travis-ci.org/adamzerella/colour-filter-converter.svg?branch=master)](https://travis-ci.org/adamzerella/accessible-colour-converter)
+# allyfe
+[![Build Status](https://travis-ci.org/adamzerella/allyfe.svg?branch=master)](https://travis-ci.org/adamzerella/allyfe)
 
-> 👀 See a colour value given a standard colour and an accessability filter
->  e.g red to a person with deuteranopia would look something like #0000B3 ). 
-
-### Install
-```js
-npm install
+> 🌈 Turn a valid color code into an accessible alternative using color-blindness filters. For example, `red` to a person with deuteranopia would look something like `#0000B3`.
+ 
+# Install
+```bash
+npm i
 ```
 
-### Test
-```js
+# Test
+```bash
 npm test
 ```
 
-### Usage
-```js
-const AccessibleColourConverter = require ( 'colour-filter-converter' );
+# Usage
+```bash
+const { AllyFe, Filter } = require ( 'allyfe' );
 
-AccessibleColourConverter( Filter.deuteranopia, red );  // Returns #0000B3 
+AllyFe( Filter.deuteranopia, red );  // Returns #0000B3
 ```
 
-## Contributing
-Please read [CONTRIBUTING.md](https://github.com/adamzerella/colour-filter-converter/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/adamzerella/colour-filter-converter/blob/master/LICENSE.md) file for details.
+# License
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/adamzerella/allyfe/blob/master/LICENSE.md) file for details.

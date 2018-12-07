@@ -1,3 +1,6 @@
 language: node_js
 node_js:
   - "lts/*"
+cache: npm
+install: npm install
+script: npm test

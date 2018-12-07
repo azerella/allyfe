@@ -4,6 +4,7 @@
  * @link https://www.npmjs.com/package/color 
 */
 const Color = require( 'color' );
+const Filter = require( './filters' );
 
 /**
  * @description Convert a RGBA[r, g, b, a] with a given accessability filter in HEX.
@@ -41,7 +42,7 @@ const Convert = ( filter, colour ) => {
  */
 const ApplyColorFilter = ( filter, colour ) => {
     // Assign variable to filter array
-    var result = filter.slice()
+    let result = filter.slice()
 
     // Iterate through the filter values 
     for ( let i = 0; i < 4; i++ ) {
@@ -68,4 +69,5 @@ const ApplyColorFilter = ( filter, colour ) => {
     ).hex()
 }
 
-module.exports = Convert
+module.exports.AllyFe = Convert
+module.exports.Filter = Filter

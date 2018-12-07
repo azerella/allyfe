@@ -1,54 +1,42 @@
 {
-  "name": "colour-filter-converter",
-  "version": "0.0.3",
-  "description": "Colour converter tool that uses a standard colour value and an accessability eye filter matrix",
-  "main": "./index.js",
+  "name": "allyfe",
+  "version": "0.1.3",
+  "description": "Turn a valid color code into an accessible alternative using a bunch of accessible filters.",
+  "main": "./src/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "mocha test.spec.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adamzerella/colour-filter-converter.git"
+    "url": "git+https://github.com/adamzerella/allyfe.git"
   },
   "keywords": [
     "accessible",
-    "accessiblity",
+    "accessibility",
+    "a11y",
     "color",
     "colour",
     "converter",
-    "filter"
+    "filter",
+    "feColorMatrix",
+    "deuteranopia",
+    "tritanopia",
+    "matrix"
   ],
   "author": {
-		"name": "Adam A. Zerella",
-		"email": "adam.zerella@gmail.com"
-	},
+    "name": "Adam Zerella",
+    "email": "adam.zerella@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adamzerella/colour-filter-converter/issues"
+    "url": "https://github.com/adamzerella/allyfe/issues"
   },
-  "homepage": "https://github.com/adamzerella/colour-filter-converter#readme",
+  "homepage": "https://github.com/adamzerella/allyfe#readme",
   "dependencies": {
-    "color": "^3.0.0"
+    "color": "^3.1.0"
   },
   "devDependencies": {
-    "jest": "^22.4.2"
-  },
-  "jest": {
-		"testEnvironment": "node",
-		"testRegex": "\\.spec.js$",
-		"collectCoverageFrom": [
-			"src/*.js"
-		],
-		"roots": [
-			"./__tests__/"
-		],
-		"coverageThreshold": {
-			"global": {
-				"branches": 0,
-				"functions": 0,
-				"lines": 0,
-				"statements": 0
-			}
-		}
-	}
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
 }
