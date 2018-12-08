@@ -1,7 +1,7 @@
 # allyfe
 [![Build Status](https://travis-ci.org/adamzerella/allyfe.svg?branch=master)](https://travis-ci.org/adamzerella/allyfe)
 [![GitHub stars](https://img.shields.io/github/stars/adamzerella/allyfe.svg)](https://github.com/adamzerella/allyfe/stargazers)
-[![npm bundle   size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/react.svg)](https://github.com/adamzerella/allyfe)
+[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/react.svg)](https://github.com/adamzerella/allyfe)
 
 > 🌈 Turn a valid color code into an accessible alternative using color-blindness filters. For example, `red` to a person with deuteranopia would look something like `#0000B3`.
  
