@@ -4,21 +4,21 @@
 > 🌈 Turn a valid color code into an accessible alternative using color-blindness filters. For example, `red` to a person with deuteranopia would look something like `#0000B3`.
  
 # Install
-```bash
+```javascript
 npm i
 ```
 
 # Test
-```bash
+```javascript
 npm test
 ```
 
 # Usage
-```bash
+```javascript
 const { AllyFe, Filter } = require ( 'allyfe' );
 
 AllyFe( Filter.deuteranopia, red );  // Returns #0000B3
 ```
 
 # License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/adamzerella/allyfe/blob/master/LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/adamzerella/allyfe/blob/master/LICENSE) file for details.
