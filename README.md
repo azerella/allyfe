@@ -22,7 +22,12 @@ npm test
 ```javascript
 const { AllyFe, Filter } = require ( 'allyfe' );
 
-AllyFe( Filter.deuteranopia, red );  // Returns #0000B3
+AllyFe( Filter.deuteranopia, 'red' );                 // Returns #9FB300
+AllyFe( Filter.deuteranopia, '#ff0000' ))             // Returns #9FB300
+AllyFe( Filter.tritanomaly, 'red' );                  // Returns #F70000
+AllyFe( Filter.tritanomaly, 'hsl( 0, 100%, 50% )' )   // Returns #F70000
+AllyFe( Filter.protanopia, 'rgb( 255,0,0,1 )' )       // Returns #918E00
+...
 ```
 
 ## Supported Filters 

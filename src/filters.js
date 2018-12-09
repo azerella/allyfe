@@ -4,7 +4,7 @@
 * @description Preset colour filter matricies to use for colour conversions.
 */
 const Filters = {
-    normal: [
+    default: [
         1,0,0,0,0,
         0,1,0,0,0,
         0,0,1,0,0,

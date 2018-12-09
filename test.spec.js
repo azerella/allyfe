@@ -66,12 +66,12 @@ describe( "Color conversions", () => {
         expect( AllyFe( Filter.achromatopsia, "rgb( 255,255,0,0.5)" )).to.equal( "#E2E2E2" );
     });
     
-    it( "Should transform orange colors to NORMAL orange.", () => {
-        expect( AllyFe( Filter.normal, "orange" )).to.equal( "#FFA500" );
-        expect( AllyFe( Filter.normal, "#ffa500" )).to.equal( "#FFA500" );
-        expect( AllyFe( Filter.normal, "hsl( 39, 100%, 50%)" )).to.equal( "#FFA600" );         //TODO HSL values are within margin of error
-        expect( AllyFe( Filter.normal, "rgb( 255,165,0)" )).to.equal( "#FFA500" );
-        expect( AllyFe( Filter.normal, "rgb( 255,165,0,1)" )).to.equal( "#FFA500" );
-        expect( AllyFe( Filter.normal, "rgb( 255,165,0,0.5)" )).to.equal( "#FFA500" );
+    it( "Should transform orange colors to default orange.", () => {
+        expect( AllyFe( Filter.default, "orange" )).to.equal( "#FFA500" );
+        expect( AllyFe( Filter.default, "#ffa500" )).to.equal( "#FFA500" );
+        expect( AllyFe( Filter.default, "hsl( 39, 100%, 50%)" )).to.equal( "#FFA600" );         //TODO HSL values are within margin of error
+        expect( AllyFe( Filter.default, "rgb( 255,165,0)" )).to.equal( "#FFA500" );
+        expect( AllyFe( Filter.default, "rgb( 255,165,0,1)" )).to.equal( "#FFA500" );
+        expect( AllyFe( Filter.default, "rgb( 255,165,0,0.5)" )).to.equal( "#FFA500" );
     });
 });
