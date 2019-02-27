@@ -2,6 +2,11 @@
 
 > 🌈 Lightweight color conversion library that converts color codes to accessible alternatives
 
+I'm aspiring to make open-source my full-time work. If you like the work that I do, please consider supporting me.
+
+[![Coffee][badge_coffee_donate]](https://www.buymeacoffee.com/adamzerella)
+[![PayPal][badge_paypal_donate]](https://www.paypal.me/adamzerella)
+
 ## Install
 
 ```javascript
