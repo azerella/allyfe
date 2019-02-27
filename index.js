@@ -4,15 +4,16 @@
  * @link https://www.npmjs.com/package/color 
 */
 const Color = require( 'color' );
+
 const Filter = require( './filters' );
 
 /**
- * @description Convert a RGBA[r, g, b, a] with a given accessability filter in HEX.
+ * Convert a RGBA[r, g, b, a] with a given accessability filter in HEX.
  * 
- * @param   { array } filter - Accessibility filter matrix ( e.g deuteranopia[0,1,0,0,0,1 ... 19] )
- * @param   { array } colour - Colour description of any format ( RGBA, String, HEX, HSL etc )
+ * @param   { number[] } filter - Accessibility filter matrix ( e.g deuteranopia[0,1,0,0,0,1 ... 19] )
+ * @param   { string } colour - Colour description of any format ( RGBA, String, HEX, HSL etc )
  * 
- * @return  { array } Multiply - The VALIDATED filter array and colour array together.
+ * @return  { number[] } Multiply - The VALIDATED filter array and colour array together.
  */
 const Convert = ( filter, colour ) => {
     // Check if filter lengths are valid
@@ -32,13 +33,14 @@ const Convert = ( filter, colour ) => {
 }
 
 /**
- * @description - Multiply a filter matrix[20] with a RGBA[4] colour.
+ * Multiply a filter matrix[20] with a RGBA[4] colour.
+ * 
  * @link https://developer.android.com/reference/android/graphics/ColorMatrix.html
 
- * @param { array } filter - Accessibility filter matrix ( e.g deuteranopia[20] )
- * @param { array } colour - RGBA[4] colour ( e.g red = [255,0,0,0.5] )
+ * @param { number[] } filter - Accessibility filter matrix ( e.g deuteranopia[20] )
+ * @param { string } colour - RGBA[4] colour ( e.g red = [255,0,0,0.5] )
  * 
- * @return { array } result - Product of the ( filter * colour) in HEX ( e.g [159, 179, 0, 0.5] ) 
+ * @return { string } Product of the ( filter * colour) in HEX.
  */
 const ApplyColorFilter = ( filter, colour ) => {
     // Assign variable to filter array

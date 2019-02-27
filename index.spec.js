@@ -1,6 +1,6 @@
 const chai = require("chai");
 const expect = chai.expect;
-const { AllyFe, Filter } = require( "./src/index.js" )
+const { AllyFe, Filter } = require( "./index.js" )
 
 describe( "Color conversions", () => {
     it("Should transform red colors to DEUTERANOPIA red", () => {

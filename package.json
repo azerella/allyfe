@@ -1,15 +1,16 @@
 {
   "name": "allyfe",
-  "version": "0.1.4",
-  "description": "Lightweight color conversion library that converts color codes to accessible alternatives.",
-  "main": "./src/index.js",
+  "version": "0.1.5",
+  "description": "Lightweight color conversion library that converts color codes to accessible alternatives",
+  "main": "index.js",
   "scripts": {
-    "test": "mocha test.spec.js"
+    "test": "mocha index.spec.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adamzerella/allyfe.git"
   },
+  "types": "index.d.ts",
   "keywords": [
     "accessible",
     "accessibility",
@@ -23,10 +24,7 @@
     "tritanopia",
     "matrix"
   ],
-  "author": {
-    "name": "Adam Zerella",
-    "email": "adam.zerella@gmail.com"
-  },
+  "author": "Adam Zerella <me@adamzerella.com> (https://adamzerella.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/adamzerella/allyfe/issues"

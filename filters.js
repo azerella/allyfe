@@ -3,7 +3,7 @@
 /** 
 * @description Preset colour filter matricies to use for colour conversions.
 */
-const Filters = {
+module.exports = {
     default: [
         1,0,0,0,0,
         0,1,0,0,0,
@@ -59,5 +59,3 @@ const Filters = {
         0, 0, 0, 1, 0
     ],
 }
-
-module.exports = Filters
